@@ -1,0 +1,20 @@
+node_modules
+
+# Hardhat files
+typechain
+cache
+artifacts
+.env
+coverage.json
+coverage
+slither/security.json
+
+.vscode
+slither
+artifacts
+artifacts_forge
+build-info
+cache_forge
+.DS_Store
+lib
+deployments

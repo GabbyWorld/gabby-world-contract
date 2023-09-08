@@ -1,0 +1,13 @@
+@openzeppelin/=node_modules/@openzeppelin/
+account-abstraction/=lib/tokenbound/lib/account-abstraction/contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+erc4626-tests/=lib/tokenbound/lib/openzeppelin-contracts/lib/erc4626-tests/
+erc6551/=lib/erc6551/
+erc721a/=node_modules/erc721a/
+forge-std/=lib/forge-std/src/
+hardhat-deploy/=node_modules/hardhat-deploy/
+hardhat/=node_modules/hardhat/
+openzeppelin-contracts/=lib/tokenbound/lib/openzeppelin-contracts/
+solmate/=node_modules/solmate/
+sstore2/=lib/erc6551/lib/sstore2/contracts/
+tokenbound/=lib/tokenbound/
