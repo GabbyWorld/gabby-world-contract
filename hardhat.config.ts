@@ -16,6 +16,7 @@ const dotenvConfigPath: string = process.env.DOTENV_CONFIG_PATH || "./.env"
 dotenvConfig({ path: resolve(__dirname, dotenvConfigPath) })
 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
+const OPBNB_API_KEY = process.env.OPBNB_API_KEY || ""
 
 const config: HardhatUserConfig = {
     defaultNetwork: "hardhat",
@@ -53,6 +54,7 @@ const config: HardhatUserConfig = {
         mainnet: getChainConfig(1),
         goerli: getChainConfig(5),
         sepolia: getChainConfig(11155111),
+        opbnb: getChainConfig(204),
     },
 
     etherscan: {
@@ -60,7 +62,18 @@ const config: HardhatUserConfig = {
             goerli: ETHERSCAN_API_KEY,
             sepolia: ETHERSCAN_API_KEY,
             mainnet: ETHERSCAN_API_KEY,
+            opbnb: OPBNB_API_KEY,
         },
+        customChains: [
+            {
+                network: "opbnb",
+                chainId: 204,
+                urls: {
+                    apiURL: "https://api-opbnb.bscscan.com/api",
+                    browserURL: "https://opbnb.bscscan.com",
+                },
+            },
+        ],
     },
 
     paths: {

@@ -9,6 +9,7 @@ dotenvConfig({ path: resolve(__dirname, dotenvConfigPath) })
 const ETHER_RPC = process.env.ETHER_RPC as string
 const GOERLI_RPC = process.env.GOERLI_RPC as string
 const SEPOLIA_RPC = process.env.SEPOLIA_RPC as string
+const OPBNB_RPC = process.env.OPBNB_RPC as string
 
 type NetworkConfigItem = {
     name: string
@@ -44,6 +45,10 @@ export const networkConfig: NetworkConfigMap = {
     9088912: {
         name: "loottest",
         url: "https://testnet.rpc.lootchain.com/http",
+    },
+    204: {
+        name: "opbnb",
+        url: OPBNB_RPC,
     },
 }
 
