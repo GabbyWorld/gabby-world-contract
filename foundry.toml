@@ -1,0 +1,32 @@
+[profile.default]
+src = "contracts"
+out = 'artifacts_forge'
+libs = ["node_modules", "lib"]
+solc = "0.8.18" 
+test = 'test'
+cache_path  = 'cache_forge'
+extra_output_files = [
+"metadata",
+]
+verbosity = 3
+offline = false
+build_info = true
+build_info_path = "build-info"
+
+fs_permissions = [
+    { access = "read", path = "./deployments" },
+    { access = "read", path = "./out" },
+    { access = "read", path = "./contexts.json" },
+    { access = "read", path = "./"},
+]
+
+[fmt]
+ignore = ['generated/**/*.sol', "lib/**/*.sol"]
+
+[profile.formatter]
+    number_underscore = "thousands"
+    int_types = "long"
+    quote_style = "double"
+
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
